@@ -34,5 +34,17 @@ class HelloApiView(APIView):
                 serlializer.errors,
                 status = status.HTTP_400_BAD_REQUEST,
                  )
+    
+    def put(self, request, pk=None):
+        """handle updating an object"""
+        return Response({"method": "PUT"})
 
+    def patch(self, request, pk=None):
+        """handle partial update of an object"""
+        return Response({'method': 'patch'})
+    
+    def delete(self, request, pk=None):
+        """Delete an object"""
+        return Response({'method': 'delete'})
+        
         
